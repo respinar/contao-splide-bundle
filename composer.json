@@ -1,0 +1,35 @@
+{
+    "name": "respinar/contao-splide",
+    "description": "a lightweight, flexible and accessible slider/carousel for Contao",
+    "keywords": ["contao", "bundle", "splide"],
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hamid Peywasti",
+            "email": "abbaszadeh.h@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13 || ^5.2"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Respinar\\SplideBundle\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "contao-community-alliance/composer-plugin": true
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Respinar\\SplideBundle\\ContaoManager\\Plugin"
+    }
+}
