@@ -120,7 +120,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 		),
 		'tstamp' => array
 		(
-			'sql'       => "int(10) unsigned NOT NULL default '0'"
+			'sql'       => "int(10) unsigned NOT NULL default 0"
 		),
 		'title' => array
 		(
@@ -165,7 +165,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
 		'speed' => array
 		(
@@ -173,21 +173,21 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 400,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '400'"
+			'sql'       => "int(10) unsigned NOT NULL default 400"
 		),
         'rewindSpeed' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default ''"
+			'sql'       => "varchar(5) unsigned NOT NULL default ''"
 		),
         'rewindByDrag' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'width' => array
 		(
@@ -223,21 +223,21 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 400,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'digit', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '400'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 400"
 		),
         'autoWidth' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'autoHeight' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'start' => array
 		(
@@ -245,7 +245,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 0,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 0"
 		),
         'perPage' => array
 		(
@@ -253,28 +253,28 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 1,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '1'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 1"
 		),
         'perMove' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default ''"
+			'sql'       => "varchar(5) NULL default ''"
 		),
         'clones' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default ''"
+			'sql'       => "varchar(5) NULL default ''"
 		),
         'cloneStatus' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'focus' => array
 		(
@@ -303,7 +303,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'pagination' => array
 		(
@@ -311,7 +311,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'paginationKeyboard' => array
 		(
@@ -319,7 +319,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'paginationDirection' => array
 		(
@@ -358,7 +358,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'noDrag' => array
 		(
@@ -380,7 +380,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 600,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '600'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 600"
 		),
         'flickMaxPages' => array
 		(
@@ -388,14 +388,14 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 1,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '1'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 1"
 		),
         'waitForTransition' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'arrowPath' => array
 		(
@@ -419,7 +419,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 5000,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '5000'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 5000"
 		),
         'pauseOnHover' => array
 		(
@@ -427,7 +427,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'pauseOnFocus' => array
 		(
@@ -435,7 +435,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'resetProgress' => array
 		(
@@ -443,7 +443,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'lazyLoad' => array
 		(
@@ -460,7 +460,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'default'   => 1,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default '5000'"
+			'sql'       => "smallint(5) unsigned NOT NULL default 5000"
 		),
         'keyboard' => array
 		(
@@ -476,7 +476,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'wheelMinThreshold' => array
 		(
@@ -497,7 +497,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'direction' => array
 		(
@@ -513,14 +513,14 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'slideFocus' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'focusableNodes' => array
 		(
@@ -534,7 +534,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'direction' => array
 		(
@@ -550,14 +550,14 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'updateOnMove' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'checkbox',
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
+			'sql'       => array('type' => 'boolean', 'default' => false)
 		),
         'direction' => array
 		(
@@ -583,7 +583,7 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'inputType' => 'checkbox',
             'default'   => 1,
 			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default '1'"
+			'sql'       => array('type' => 'boolean', 'default' => true)
 		),
         'breakpoints' => array
 		(
