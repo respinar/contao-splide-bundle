@@ -483,14 +483,14 @@ $GLOBALS['TL_DCA']['tl_splide'] = array
 			'exclude'   => true,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default ''"
+			'sql'       => "smallint(5) unsigned NULL"
 		),
         'wheelSleep' => array
 		(
 			'exclude'   => true,
 			'inputType' => 'text',
 			'eval'      => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'       => "smallint(5) unsigned NOT NULL default ''"
+			'sql'       => "smallint(5) unsigned NULL"
 		),
         'releaseWheel' => array
 		(
