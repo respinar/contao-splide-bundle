@@ -1,0 +1,10 @@
+{
+    "name": "contao-splide",
+    "version": "1.0.0",
+    "scripts": {
+        "postinstall": "cp -r node_modules/@splidejs/splide/dist/* public/"
+    },
+    "dependencies": {
+        "@splidejs/splide": "^4.1.4"
+    }
+}
