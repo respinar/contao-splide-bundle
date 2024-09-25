@@ -1,5 +1,5 @@
 {
-    "name": "respinar/contao-splide",
+    "name": "respinar/contao-splide-bundle",
     "description": "a lightweight, flexible and accessible slider/carousel for Contao",
     "keywords": ["contao", "bundle", "splide"],
     "type": "contao-bundle",
