@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Respinar\\SplideBundle\\": "src/"
+            "Respinar\\ContaoSplideBundle\\": "src/"
         },
         "classmap": [
             "contao/"
